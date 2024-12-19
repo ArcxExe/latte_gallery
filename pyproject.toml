@@ -20,6 +20,7 @@ pydantic-settings = "^2.6.1"
 pycryptodome = "^3.21.0"
 passlib = "^1.7.4"
 python-multipart = "^0.0.20"
+bcrypt = "^4.2.1"
 
 
 [build-system]
