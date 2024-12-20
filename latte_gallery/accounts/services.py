@@ -23,7 +23,7 @@ class AccountService:
         if account is not None:
             raise HTTPException(status.HTTP_409_CONFLICT,detail="Аккаунт уже создан")
 
-        account = Account(**schema.model_dump(),password=get_password_hash(schema.password),)
+        account = Account(**schema.model_dump(exclude=["password"]),password=get_password_hash(schema.password),)
 
         session.add(account)
         await session.commit()

@@ -5,7 +5,7 @@ services:
       context: .
     environment:
       SERVER_PORT: "8000"
-      ROOT_PATH: /
+      ROOT_PATH: /api
       DB_URL: postgresql+psycopg://user:qwerty12@database:5432/latte_gallery
     secrets:
       - source: token_secret

@@ -23,6 +23,7 @@ def create_app():
         title="LatteGallery",
         dependencies=[Depends(authenticate_user)],
         lifespan=_app_lifespan,
+        servers=[{"url":"http://localhost/api"}],
         root_path_in_servers=False,
     )
 
